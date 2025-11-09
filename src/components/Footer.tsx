@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <ShieldCheck className="w-6 h-6 text-accent" />
-              <span className="text-lg font-bold">CreditGuard</span>
+              <span className="text-lg font-bold">TransUnion</span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Your trusted partner for credit monitoring, identity protection, and financial insights. 
