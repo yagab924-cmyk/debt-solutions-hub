@@ -11,8 +11,9 @@ const Footer = () => {
               <span className="text-lg font-bold">TransUnion</span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Your trusted partner for credit monitoring, identity protection, and financial insights. 
-              Empowering millions to take control of their credit health.
+              Your trusted partner for credit monitoring, identity protection,
+              and financial insights. Empowering millions to take control of
+              their credit health.
             </p>
           </div>
 
@@ -70,7 +71,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} CreditGuard. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} CreditGuard. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
