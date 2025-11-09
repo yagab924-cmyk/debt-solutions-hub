@@ -1,80 +1,72 @@
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Shield, TrendingUp, Bell, Lock, Sparkles } from "lucide-react";
 
 const benefits = [
   {
-    title: "FDCPA Compliant",
-    description: "All our practices strictly adhere to the Fair Debt Collection Practices Act and state regulations.",
+    icon: TrendingUp,
+    title: "Free Daily Updates",
+    description: "Access your credit score and full credit report every single day at no cost. Stay on top of your credit health with the latest information.",
   },
   {
-    title: "No Recovery, No Fee",
-    description: "Our contingency-based model means you only pay when we successfully recover your debt.",
+    icon: Shield,
+    title: "Identity Protection",
+    description: "Advanced monitoring across the dark web and public records. Receive immediate alerts if your personal information is compromised.",
   },
   {
-    title: "Fast Results",
-    description: "Average recovery time of 30-45 days with our streamlined processes and expert negotiators.",
+    icon: Bell,
+    title: "Real-Time Alerts",
+    description: "Get instant notifications for critical changes to your credit report including new accounts, inquiries, and address changes.",
   },
   {
-    title: "Transparent Reporting",
-    description: "Real-time access to case status, detailed reporting, and regular updates on all accounts.",
+    icon: Lock,
+    title: "Credit Lock Feature",
+    description: "Lock and unlock your credit file instantly with a single tap. Prevent unauthorized access and protect against identity theft.",
   },
   {
-    title: "Preserve Relationships",
-    description: "We use professional, respectful communication to maintain your business relationships.",
+    icon: Sparkles,
+    title: "Personalized Insights",
+    description: "Receive tailored recommendations and credit-matched offers. Understand exactly what steps to take to improve your credit score.",
   },
   {
-    title: "Industry Expertise",
-    description: "Specialized knowledge across multiple industries including healthcare, retail, and finance.",
+    icon: CheckCircle2,
+    title: "Easy to Use",
+    description: "Simple, intuitive interface makes monitoring your credit effortless. Access everything you need from one convenient dashboard.",
   },
 ];
 
 const Benefits = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-secondary/30">
       <div className="container px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose Our Services
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              We combine industry-leading expertise with ethical practices to deliver results you can trust. Our proven track record speaks for itself.
-            </p>
-            <div className="space-y-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">{benefit.title}</h3>
-                    <p className="text-muted-foreground">{benefit.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="text-center mb-16">
+          <div className="inline-block mb-4 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
+            <span className="text-accent font-semibold text-sm">Why CreditGuard</span>
           </div>
-          
-          <div className="relative">
-            <div 
-              className="rounded-2xl overflow-hidden shadow-2xl"
-              style={{ boxShadow: 'var(--shadow-hover)' }}
-            >
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary to-primary/80 p-12 flex items-center justify-center">
-                <div className="text-center text-primary-foreground">
-                  <div className="text-6xl font-bold mb-4">$50M+</div>
-                  <div className="text-2xl mb-8">Successfully Recovered</div>
-                  <div className="grid grid-cols-2 gap-8 text-left">
-                    <div>
-                      <div className="text-3xl font-bold text-accent mb-2">2,500+</div>
-                      <div className="text-sm opacity-90">Cases Resolved</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-bold text-accent mb-2">98%</div>
-                      <div className="text-sm opacity-90">Client Satisfaction</div>
-                    </div>
-                  </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Build Your Credit Confidence
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Join millions who trust CreditGuard to monitor their credit and protect their financial future.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <div
+                key={index}
+                className="p-8 bg-card border border-border rounded-lg"
+              >
+                <div className="mb-6 p-4 bg-accent/10 rounded-lg inline-block">
+                  <Icon className="w-8 h-8 text-accent" />
                 </div>
+                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

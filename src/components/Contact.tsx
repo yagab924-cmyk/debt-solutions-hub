@@ -1,101 +1,77 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, Shield, Clock, Sparkles } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-24 bg-gradient-to-br from-background via-secondary/20 to-background">
       <div className="container px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get Started Today
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Ready to recover your outstanding debts? Contact us for a free consultation
-          </p>
-        </div>
-        
         <div className="max-w-4xl mx-auto">
-          <Card 
-            className="p-8 md:p-12"
-            style={{ boxShadow: 'var(--shadow-card)' }}
-          >
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-accent" />
-                    </div>
-                    <div>
-                      <div className="font-semibold mb-1">Phone</div>
-                      <div className="text-muted-foreground">1-800-COLLECT</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-accent" />
-                    </div>
-                    <div>
-                      <div className="font-semibold mb-1">Email</div>
-                      <div className="text-muted-foreground">info@debtrecovery.com</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-accent" />
-                    </div>
-                    <div>
-                      <div className="font-semibold mb-1">Office</div>
-                      <div className="text-muted-foreground">
-                        123 Financial District<br />
-                        New York, NY 10004
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mt-8 p-4 bg-secondary rounded-lg">
-                  <div className="text-sm font-semibold mb-1">Business Hours</div>
-                  <div className="text-sm text-muted-foreground">
-                    Monday - Friday: 8:00 AM - 6:00 PM<br />
-                    Saturday: 9:00 AM - 2:00 PM
-                  </div>
-                </div>
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
+              <span className="text-accent font-semibold text-sm">Get Started</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Start Monitoring Your Credit Today
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Sign up in minutes and get instant access to your credit score, full report, and personalized insights completely free.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="p-6 bg-card border border-border rounded-lg flex items-start gap-4">
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <Clock className="w-6 h-6 text-accent" />
               </div>
-              
               <div>
-                <h3 className="text-2xl font-bold mb-6">Quick Response</h3>
-                <p className="text-muted-foreground mb-6">
-                  Fill out the form below and our team will get back to you within 24 hours.
-                </p>
-                <Button size="lg" variant="premium" className="w-full">
-                  Request Free Consultation
-                </Button>
-                
-                <div className="mt-8 p-6 bg-accent/5 rounded-lg border border-accent/20">
-                  <h4 className="font-semibold mb-3 text-accent">Free Consultation Includes:</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent">•</span>
-                      <span>Case evaluation and recovery estimate</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent">•</span>
-                      <span>Customized collection strategy</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent">•</span>
-                      <span>No obligation, completely confidential</span>
-                    </li>
-                  </ul>
-                </div>
+                <h3 className="font-bold mb-1">Quick Setup</h3>
+                <p className="text-muted-foreground">Create your account in under 2 minutes</p>
+                <p className="text-sm text-muted-foreground mt-1">No credit card required</p>
               </div>
             </div>
-          </Card>
+
+            <div className="p-6 bg-card border border-border rounded-lg flex items-start gap-4">
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <Sparkles className="w-6 h-6 text-accent" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">Instant Access</h3>
+                <p className="text-muted-foreground">See your credit score immediately</p>
+                <p className="text-sm text-muted-foreground mt-1">Full report available right away</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-card border border-border rounded-lg flex items-start gap-4">
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <Shield className="w-6 h-6 text-accent" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">Secure & Private</h3>
+                <p className="text-muted-foreground">Bank-level encryption protects your data</p>
+                <p className="text-sm text-muted-foreground mt-1">Your information is safe with us</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-card border border-border rounded-lg flex items-start gap-4">
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <Mail className="w-6 h-6 text-accent" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">24/7 Support</h3>
+                <p className="text-muted-foreground">Help available whenever you need it</p>
+                <p className="text-sm text-muted-foreground mt-1">support@creditguard.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" variant="premium" className="text-lg">
+              Sign Up Free - No Credit Card Required
+            </Button>
+            <p className="text-sm text-muted-foreground mt-4">
+              Free forever • Daily updates • Cancel anytime
+            </p>
+          </div>
         </div>
       </div>
     </section>

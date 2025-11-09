@@ -1,54 +1,77 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import { ArrowRight, TrendingUp, Shield, Clock } from "lucide-react";
+import heroImage from "@/assets/credit-hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/50" />
       </div>
       
-      <div className="container relative z-10 px-4 py-20">
+      <div className="container px-4 py-32 relative z-10">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-2 mb-6">
-            <Shield className="w-8 h-8 text-accent" />
-            <span className="text-accent font-semibold">Professional Debt Recovery</span>
+          <div className="inline-block mb-6 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
+            <span className="text-accent font-semibold text-sm">Free Credit Reports & Scores</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Recover What's Rightfully Yours
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Credit Confidence
+            <span className="block text-accent">Starts Here</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
-            Expert debt collection services with proven results. We combine legal expertise with ethical practices to recover your outstanding debts efficiently.
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            Get your free credit score and reports updated daily. Monitor your credit health, 
+            protect your identity, and access personalized financial insights to help you 
+            achieve your financial goals.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button size="lg" variant="hero" className="text-lg">
-              Get Started Today
+              Get Your Free Score
               <ArrowRight className="ml-2" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg bg-primary-foreground/10 text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/20">
+            <Button size="lg" variant="outline" className="text-lg border-2">
               Learn More
             </Button>
           </div>
           
-          <div className="mt-12 grid grid-cols-3 gap-8 text-primary-foreground">
-            <div>
-              <div className="text-4xl font-bold text-accent mb-2">98%</div>
-              <div className="text-sm opacity-90">Success Rate</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <TrendingUp className="w-6 h-6 text-accent" />
+              </div>
+              <div>
+                <div className="text-3xl font-bold">Free</div>
+                <div className="text-sm text-muted-foreground">Daily Updates</div>
+              </div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-accent mb-2">15+</div>
-              <div className="text-sm opacity-90">Years Experience</div>
+            
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <Shield className="w-6 h-6 text-accent" />
+              </div>
+              <div>
+                <div className="text-3xl font-bold">24/7</div>
+                <div className="text-sm text-muted-foreground">Monitoring</div>
+              </div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-accent mb-2">$50M+</div>
-              <div className="text-sm opacity-90">Recovered</div>
+            
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <Clock className="w-6 h-6 text-accent" />
+              </div>
+              <div>
+                <div className="text-3xl font-bold">Instant</div>
+                <div className="text-sm text-muted-foreground">Alerts</div>
+              </div>
             </div>
           </div>
         </div>

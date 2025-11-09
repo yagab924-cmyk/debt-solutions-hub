@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Scale } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 const Header = () => {
   return (
@@ -7,24 +7,24 @@ const Header = () => {
       <div className="container px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-2">
-            <Scale className="w-8 h-8 text-accent" />
-            <span className="text-xl font-bold">DebtRecovery Pro</span>
+            <ShieldCheck className="w-8 h-8 text-accent" />
+            <span className="text-xl font-bold">CreditGuard</span>
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm font-medium hover:text-accent transition-colors">
-              Services
+              Products
             </a>
             <a href="#benefits" className="text-sm font-medium hover:text-accent transition-colors">
-              Why Us
+              Features
             </a>
             <a href="#contact" className="text-sm font-medium hover:text-accent transition-colors">
-              Contact
+              Get Started
             </a>
           </nav>
           
           <Button variant="premium">
-            Get Started
+            Sign Up Free
           </Button>
         </div>
       </div>
