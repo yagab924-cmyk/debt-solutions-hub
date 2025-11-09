@@ -59,7 +59,7 @@ const Contact = () => {
               <div>
                 <h3 className="font-bold mb-1">24/7 Support</h3>
                 <p className="text-muted-foreground">Help available whenever you need it</p>
-                <p className="text-sm text-muted-foreground mt-1">support@creditguard.com</p>
+                <p className="text-sm text-muted-foreground mt-1">Call: 0107 135233</p>
               </div>
             </div>
           </div>
